@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Gas Utility Service</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div th:replace="layout :: content">
+        <div class="text-center">
+            <h1>Welcome to Gas Utility Service</h1>
+            <p>Submit and track your service requests online!</p>
+            <a href="/requests/dashboard" class="btn btn-primary">Go to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Service Request</title>
+</head>
+<body>
+    <div th:replace="layout :: content">
+        <h2>Submit a Service Request</h2>
+
+        <form action="/requests/submit" method="post">
+            <div class="mb-3">
+                <label for="serviceType" class="form-label">Service Type</label>
+                <select class="form-select" id="serviceType" name="serviceType" required>
+                    <option value="Gas Leakage">Gas Leakage</option>
+                    <option value="Meter Issue">Meter Issue</option>
+                    <option value="Billing Issue">Billing Issue</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
